@@ -44,8 +44,8 @@ class AppTheme {
         ),
       ),
 
-      // Use CardTheme (not CardThemeData) for Flutter 3.19–3.24 compatibility
-      cardTheme: CardTheme(
+      // CardThemeData — correct for Flutter 3.44
+      cardTheme: CardThemeData(
         color: AppColors.surface,
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -178,7 +178,7 @@ class AppTheme {
           color: AppColors.darkTextPrimary,
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: AppColors.darkSurface,
         elevation: 0,
         shape: RoundedRectangleBorder(

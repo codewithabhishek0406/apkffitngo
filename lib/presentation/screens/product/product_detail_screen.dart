@@ -1,4 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
+﻿import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -426,10 +426,10 @@ class _ProductDetailViewState extends ConsumerState<_ProductDetailView>
               child: Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: AppColors.warning.withOpacity(0.08),
+                  color: AppColors.warning.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: AppColors.warning.withOpacity(0.3),
+                    color: AppColors.warning.withValues(alpha: 0.3),
                   ),
                 ),
                 child: Row(
@@ -582,7 +582,7 @@ class _ToggleBtn extends StatelessWidget {
           boxShadow: active
               ? [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.06),
+                    color: Colors.black.withValues(alpha: 0.06),
                     blurRadius: 4,
                     offset: const Offset(0, 1),
                   ),
@@ -651,7 +651,7 @@ class _DietChip extends StatelessWidget {
     };
     return _Chip(
       label: dietType.label,
-      color: color.withOpacity(0.1),
+      color: color.withValues(alpha: 0.1),
       textColor: color,
     );
   }
@@ -679,9 +679,9 @@ class _AllergenRow extends StatelessWidget {
           (a) => Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(6),
-              border: Border.all(color: color.withOpacity(0.3)),
+              border: Border.all(color: color.withValues(alpha: 0.3)),
             ),
             child: Text(
               a.titleCase,

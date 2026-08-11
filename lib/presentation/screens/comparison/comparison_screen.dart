@@ -1,4 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
+﻿import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -252,9 +252,9 @@ class _NutrientCompareRow extends StatelessWidget {
                     vertical: 10,
                   ),
                   color: isMax
-                      ? AppColors.error.withOpacity(0.05)
+                      ? AppColors.error.withValues(alpha: 0.05)
                       : isMin
-                          ? AppColors.success.withOpacity(0.05)
+                          ? AppColors.success.withValues(alpha: 0.05)
                           : null,
                   child: v == null
                       ? Text(

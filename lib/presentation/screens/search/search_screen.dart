@@ -387,7 +387,7 @@ class _FilterPanel extends ConsumerWidget {
           Text('Sort', style: AppTextStyles.labelLarge),
           const SizedBox(height: 6),
           DropdownButtonFormField<SortOption>(
-            value: filter.sortBy,
+            initialValue: filter.sortBy,
             isDense: true,
             decoration: const InputDecoration(contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
             items: SortOption.values

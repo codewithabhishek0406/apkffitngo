@@ -27,10 +27,16 @@ jobs:
           channel: stable
           cache: true
 
+      # Write local.properties so Gradle can find the Flutter SDK on the CI runner
+      - name: Write android/local.properties
+        run: |
+          echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
+          echo "sdk.dir=$ANDROID_SDK_ROOT"  >> android/local.properties
+
       - name: Flutter pub get
         run: flutter pub get
 
-      # Analyze only lib/ — skips the test placeholder file
+      # Only lib/ — style infos disabled via analysis_options.yaml
       - name: Flutter analyze
         run: flutter analyze lib --no-fatal-warnings
 

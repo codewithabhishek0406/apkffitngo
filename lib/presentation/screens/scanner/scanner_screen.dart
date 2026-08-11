@@ -153,7 +153,7 @@ class _ScannerScreenState extends ConsumerState<ScannerScreen> {
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
                   colors: [
-                    Colors.black.withValues(alpha: 0.8),
+                    Colors.black.withOpacity(0.8),
                     Colors.transparent,
                   ],
                 ),
@@ -246,7 +246,7 @@ class _ScannerOverlayPainter extends CustomPainter {
         Rect.fromLTWH(cutoutLeft, cutoutTop, cutoutWidth, cutoutHeight);
 
     final paint = Paint()
-      ..color = Colors.black.withValues(alpha: 0.55);
+      ..color = Colors.black.withOpacity(0.55);
     final path = Path()
       ..addRect(Rect.fromLTWH(0, 0, size.width, size.height))
       ..addRRect(RRect.fromRectAndRadius(

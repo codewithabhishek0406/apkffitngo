@@ -118,7 +118,7 @@ class _MacroTile extends StatelessWidget {
           width: 52,
           height: 52,
           decoration: BoxDecoration(
-            color: color.withValues(alpha: 0.1),
+            color: color.withOpacity(0.1),
             shape: BoxShape.circle,
           ),
           child: Center(
@@ -141,7 +141,7 @@ class _MacroTile extends StatelessWidget {
                         unit,
                         style: TextStyle(
                           fontSize: 9,
-                          color: color.withValues(alpha: 0.8),
+                          color: color.withOpacity(0.8),
                         ),
                       ),
                     ],

@@ -252,9 +252,9 @@ class _NutrientCompareRow extends StatelessWidget {
                     vertical: 10,
                   ),
                   color: isMax
-                      ? AppColors.error.withValues(alpha: 0.05)
+                      ? AppColors.error.withOpacity(0.05)
                       : isMin
-                          ? AppColors.success.withValues(alpha: 0.05)
+                          ? AppColors.success.withOpacity(0.05)
                           : null,
                   child: v == null
                       ? Text(

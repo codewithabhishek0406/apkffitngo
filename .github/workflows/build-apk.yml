@@ -20,14 +20,14 @@ jobs:
           distribution: temurin
           java-version: "17"
 
+      # Use latest stable Flutter — fixes app_links/Groovy compatibility
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.24.0"
           channel: stable
           cache: true
 
-      # Write local.properties so Gradle can find the Flutter SDK on the CI runner
+      # Write local.properties so Gradle can find the Flutter SDK on CI
       - name: Write android/local.properties
         run: |
           echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
@@ -36,7 +36,6 @@ jobs:
       - name: Flutter pub get
         run: flutter pub get
 
-      # Only lib/ — style infos disabled via analysis_options.yaml
       - name: Flutter analyze
         run: flutter analyze lib --no-fatal-warnings
 
